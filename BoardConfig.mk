@@ -34,7 +34,7 @@ TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_sm7225
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_m23xq
 
 # Architecture
 TARGET_ARCH := arm64
