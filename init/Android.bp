@@ -15,7 +15,7 @@
 //
 
 cc_library_static {
-    name: "libinit_sm7225",
+    name: "libinit_m23xq",
     recovery_available: true,
     srcs: ["init_sm7225.cpp"],
     whole_static_libs: ["libbase"],
