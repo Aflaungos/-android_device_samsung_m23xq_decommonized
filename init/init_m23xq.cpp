@@ -10,7 +10,7 @@
 #include "property_service.h"
 #include "vendor_init.h"
 
-#include "init_sm7225.h"
+#include "init_m23xq.h"
 
 #define MODEL_NAME_LEN 5
 #define BUILD_NAME_LEN 8
