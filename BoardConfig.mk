@@ -34,7 +34,7 @@ TARGET_BOOTLOADER_BOARD_NAME := lito
 TARGET_NO_BOOTLOADER := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sm7225
+TARGET_INIT_VENDOR_LIB := //$(LOCAL_PATH):libinit_sm7225
 
 # Architecture
 TARGET_ARCH := arm64
@@ -80,7 +80,7 @@ BOARD_MKBOOTIMG_ARGS += --board $(BOARD_NAME)
 BOARD_MKBOOTIMG_ARGS += --kernel_offset $(BOARD_KERNEL_OFFSET)
 
 # Additional root folders
-TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(LOCAL_PATH)/config.fs
 
 BOARD_ROOT_EXTRA_FOLDERS += \
     metadata \
@@ -135,7 +135,7 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 BOARD_SUPPORTS_SOUND_TRIGGER := true
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(COMMON_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth/include
 
 # Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -145,9 +145,9 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x400000000LL
 TARGET_SCREEN_DENSITY := 384
 
 # HIDL manifests
-DEVICE_MANIFEST_FILE := $(COMMON_PATH)/configs/manifest.xml
-DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(COMMON_PATH)/configs/framework_compatibility_matrix.xml
-DEVICE_MATRIX_FILE := $(COMMON_PATH)/configs/compatibility_matrix.xml
+DEVICE_MANIFEST_FILE := $(LOCAL_PATH)/configs/manifest.xml
+DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := $(LOCAL_PATH)/configs/framework_compatibility_matrix.xml
+DEVICE_MATRIX_FILE := $(LOCAL_PATH)/configs/compatibility_matrix.xml
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -181,12 +181,12 @@ BOARD_HAS_DOWNLOAD_MODE := true
 BOARD_INCLUDE_RECOVERY_DTBO := true
 TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 TARGET_USES_MKE2FS := true
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/recovery/root/fstab.default
+TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/recovery/root/fstab.default
 
 # SePolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
-SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/vendor
+SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy/public
 
 # Treble
 BOARD_VNDK_VERSION := current
